@@ -1,0 +1,255 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Noticias{% endblock %}
+
+{% block content %}
+<header>
+  <h2 class="titulo">📰 Últimas Noticias del Fútbol Argentino</h2>
+</header>
+
+<main>
+  <div class="contenedor-noticias">
+
+    <section class="noticias-container">
+      
+      <article class="noticia-card">
+        <div class="noticia-header">
+          <span class="icono-noticia">⚽</span>
+          <div>
+            <h3>River Plate</h3>
+            <span class="fecha">Hace 2 horas</span>
+          </div>
+        </div>
+        
+        <div class="noticia-contenido">
+          <h4>🔥 Gallardo analiza refuerzos para el Monumental</h4>
+          <p>El Muñeco estaría buscando incorporar un mediocampista creativo y un lateral derecho para reforzar el plantel de cara al próximo torneo. La dirigencia ya habría iniciado conversaciones con agentes.</p>
+          
+          <div class="categoria">
+            <span class="tag">Mercado de Pases</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="noticia-card">
+        <div class="noticia-header">
+          <span class="icono-noticia">🏆</span>
+          <div>
+            <h3>Boca Juniors</h3>
+            <span class="fecha">Hace 5 horas</span>
+          </div>
+        </div>
+        
+        <div class="noticia-contenido">
+          <h4>💪 Meoni sigue con su recuperación y podría volver antes de lo esperado</h4>
+          <p>El delantero xeneize evoluciona favorablemente de su lesión y el cuerpo médico es optimista. Podría estar disponible para el clásico del próximo mes.</p>
+          
+          <div class="categoria">
+            <span class="tag">Lesiones</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="noticia-card">
+        <div class="noticia-header">
+          <span class="icono-noticia">📊</span>
+          <div>
+            <h3>Racing Club</h3>
+            <span class="fecha">Hace 1 día</span>
+          </div>
+        </div>
+        
+        <div class="noticia-contenido">
+          <h4>🎯 La Academia cierra acuerdo con promesa uruguaya</h4>
+          <p>Racing estaría a punto de cerrar la contratación de un joven volante uruguayo de 21 años que viene destacándose en la Primera División de su país. El jugador llegaría a préstamo con opción de compra.</p>
+          
+          <div class="categoria">
+            <span class="tag">Fichajes</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="noticia-card">
+        <div class="noticia-header">
+          <span class="icono-noticia">⭐</span>
+          <div>
+            <h3>Independiente</h3>
+            <span class="fecha">Hace 3 horas</span>
+          </div>
+        </div>
+        
+        <div class="noticia-contenido">
+          <h4>🔴 Renovación en el Rojo: tres juveniles firman contrato profesional</h4>
+          <p>La dirigencia del Rojo apostó por la cantera y tres jugadores de las inferiores firmaron su primer contrato profesional. Los juveniles vienen entrenando con el plantel principal desde hace dos semanas.</p>
+          
+          <div class="categoria">
+            <span class="tag">Inferiores</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="noticia-card">
+        <div class="noticia-header">
+          <span class="icono-noticia">💰</span>
+          <div>
+            <h3>San Lorenzo</h3>
+            <span class="fecha">Hace 8 horas</span>
+          </div>
+        </div>
+        
+        <div class="noticia-contenido">
+          <h4>🚨 Oferta millonaria desde Brasil por figura del Ciclón</h4>
+          <p>Un club de la Serie A brasileña habría presentado una oferta formal por uno de los referentes del equipo de Boedo. La dirigencia analiza la propuesta que superaría los 8 millones de dólares.</p>
+          
+          <div class="categoria">
+            <span class="tag">Transferencias</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="noticia-card">
+        <div class="noticia-header">
+          <span class="icono-noticia">🎮</span>
+          <div>
+            <h3>Estudiantes de La Plata</h3>
+            <span class="fecha">Hace 6 horas</span>
+          </div>
+        </div>
+        
+        <div class="noticia-contenido">
+          <h4>⚡ El Pincha prepara homenaje a leyenda del club</h4>
+          <p>Estudiantes organizará un partido amistoso para despedir a uno de sus ídolos históricos. El evento se realizaría en el estadio UNO el próximo mes con la participación de exjugadores.</p>
+          
+          <div class="categoria">
+            <span class="tag">Institucional</span>
+          </div>
+        </div>
+      </article>
+
+    </section>
+
+    </div>
+</main>
+
+<style>
+  .contenedor-noticias {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2em;
+  }
+
+  .noticias-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 1.5em;
+    margin-bottom: 2em;
+  }
+
+  .noticia-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    border-left: 4px solid #338ccc;
+  }
+
+  .noticia-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  }
+
+  .noticia-header {
+    background: linear-gradient(135deg, #338ccc 0%, #2a7ab8 100%);
+    color: white;
+    padding: 1.2em;
+    display: flex;
+    align-items: center;
+    gap: 1em;
+  }
+
+  .icono-noticia {
+    font-size: 2em;
+    background: rgba(255,255,255,0.2);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .noticia-header h3 {
+    margin: 0;
+    font-size: 1.1em;
+  }
+
+  .fecha {
+    font-size: 0.85em;
+    opacity: 0.9;
+  }
+
+  .noticia-contenido {
+    padding: 1.5em;
+  }
+
+  .noticia-contenido h4 {
+    color: #2a7ab8;
+    margin-bottom: 0.8em;
+    font-size: 1.1em;
+    line-height: 1.4;
+  }
+
+  .noticia-contenido p {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 1em;
+  }
+
+  .categoria {
+    margin-top: 1em;
+  }
+
+  .tag {
+    display: inline-block;
+    background: #e3f2fd;
+    color: #1976d2;
+    padding: 0.4em 0.8em;
+    border-radius: 20px;
+    font-size: 0.85em;
+    font-weight: 500;
+  }
+
+  .botonera {
+    text-align: center;
+    margin-top: 2em;
+  }
+
+  .boton {
+    display: inline-block;
+    padding: 1em 2em;
+    background: #338ccc;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background 0.3s;
+    font-weight: 500;
+  }
+
+  .boton:hover {
+    background: #2a7ab8;
+  }
+
+  @media (max-width: 768px) {
+    .contenedor-noticias {
+      padding: 1em;
+    }
+    
+    .noticias-container {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+{% endblock %}

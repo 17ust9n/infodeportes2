@@ -27,6 +27,15 @@ def detalle_equipo(request, pk):
     equipo = get_object_or_404(Equipo, pk=pk)
     return render(request, 'equipo_detalle.html', {'equipo': equipo})
 
+@login_required
+def seleccion_argentina(request):
+    return render(request, 'seleccion_argentina.html')
+
+@login_required
+def noticias(request):
+    equipos = Equipo.objects.all()
+    return render(request, 'noticias.html', {'equipos': equipos})
+
 
 # --- VISTA PARTIDO AMISTOSO ---
 @login_required

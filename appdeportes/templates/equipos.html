@@ -8,6 +8,16 @@
   <h2 class="titulo">Lista de Equipos 🛡️</h2>
 </header>
 
+<!-- Botón destacado para la Selección Argentina -->
+<div class="contenedor-seleccion-btn">
+  <a href="{% url 'seleccion_argentina' %}" class="boton-seleccion">
+    <img src="{{ MEDIA_URL }}escudos/escudo_afa.png" alt="Escudo AFA" class="escudo-afa-btn">
+    <div class="texto-seleccion">
+      <span class="titulo-seleccion">Selección Argentina</span>
+    </div>
+  </a>
+</div>
+
 <section class="contenedor-equipos">
   {% for equipo in equipos %}
     <article class="recuadro-equipo">
@@ -33,5 +43,78 @@
     <p>No hay equipos disponibles.</p>
   {% endfor %}
 </section>
+
+<style>
+  .contenedor-seleccion-btn {
+    max-width: 800px;
+    margin: 0 auto 2em auto;
+    padding: 0 1em;
+  }
+
+  .boton-seleccion {
+    display: flex;
+    align-items: center;
+    gap: 1.5em;
+    padding: 1.5em 2em;
+    background: linear-gradient(135deg, #75AADB 0%, #5599CC 100%);
+    border: 3px solid #338ccc;
+    border-radius: 12px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(51, 140, 204, 0.3);
+  }
+
+  .boton-seleccion:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(51, 140, 204, 0.5);
+    background: linear-gradient(135deg, #5599CC 0%, #338ccc 100%);
+  }
+
+  .escudo-afa-btn {
+    width: 60px;
+    height: 60px;
+    background: white;
+    border-radius: 50%;
+    padding: 0.5em;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  }
+
+  .texto-seleccion {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3em;
+  }
+
+  .titulo-seleccion {
+    font-size: 1.3em;
+    font-weight: bold;
+    color: white;
+  }
+
+  .subtitulo-seleccion {
+    font-size: 0.9em;
+    color: rgba(255, 255, 255, 0.9);
+  }
+
+  @media (max-width: 600px) {
+    .boton-seleccion {
+      padding: 1em 1.5em;
+      gap: 1em;
+    }
+
+    .escudo-afa-btn {
+      width: 50px;
+      height: 50px;
+    }
+
+    .titulo-seleccion {
+      font-size: 1.1em;
+    }
+
+    .subtitulo-seleccion {
+      font-size: 0.85em;
+    }
+  }
+</style>
 
 {% endblock %}
